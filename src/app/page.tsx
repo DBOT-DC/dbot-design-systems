@@ -1,65 +1,114 @@
-import Image from "next/image";
+import { dbotStack, catalog, formatStars, getDBOTPicks } from "@/lib/catalog";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { CopyButton } from "@/components/copy-button";
+import { Star, Layers, Zap, ExternalLink } from "lucide-react";
 
 export default function Home() {
+  const topPicks = getDBOTPicks();
+  const totalLibs = catalog.reduce((sum, c) => sum + c.libraries.length, 0);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+      {/* Hero */}
+      <section className="text-center space-y-4 py-8">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+          <span className="bg-gradient-to-r from-violet-500 via-cyan-500 to-emerald-500 bg-clip-text text-transparent">
+            React UI Library Reference
+          </span>
+        </h1>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          Curated catalog of {totalLibs} libraries across {catalog.length} categories for DBOT projects.
+          Browse, compare, and copy install commands.
+        </p>
+        <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
+          <span className="flex items-center gap-1"><Layers className="h-4 w-4" /> {totalLibs} libraries</span>
+          <span className="flex items-center gap-1"><Star className="h-4 w-4" /> {topPicks.length} top picks</span>
+          <span className="flex items-center gap-1"><Zap className="h-4 w-4" /> All MIT/Apache</span>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <Separator />
+
+      {/* Full Stack Install */}
+      <section>
+        <h2 className="text-2xl font-bold mb-4">⚡ Full DBOT Stack — One Command</h2>
+        <Card className="bg-card/50">
+          <CardContent className="pt-4">
+            <div className="flex items-center gap-2">
+              <code className="flex-1 text-sm bg-muted px-4 py-3 rounded-lg font-mono overflow-x-auto">
+                npx shadcn@latest init && npm install tremor recharts react-hook-form @hookform/resolvers zod @tanstack/react-table @tanstack/react-query zustand nuqs framer-motion @formkit/auto-animate lucide-react lightweight-charts
+              </code>
+              <CopyButton text="npx shadcn@latest init && npm install tremor recharts react-hook-form @hookform/resolvers zod @tanstack/react-table @tanstack/react-query zustand nuqs framer-motion @formkit/auto-animate lucide-react lightweight-charts" />
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* DBOT Stack Grid */}
+      <section>
+        <h2 className="text-2xl font-bold mb-4">🏗️ DBOT Recommended Stack</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+          {dbotStack.map((item) => (
+            <Card key={item.layer} className="group hover:border-primary/50 transition-colors">
+              <CardHeader className="pb-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl">{item.icon}</span>
+                  <Badge variant="secondary" className="text-xs">{item.layer}</Badge>
+                </div>
+                <CardTitle className="text-base">{item.library}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-2">
+                  <code className="flex-1 text-xs bg-muted px-3 py-2 rounded font-mono truncate">
+                    {item.install}
+                  </code>
+                  <CopyButton text={item.install} />
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
-      </main>
+      </section>
+
+      <Separator />
+
+      {/* Top Picks */}
+      <section>
+        <h2 className="text-2xl font-bold mb-4">⭐ DBOT Top Picks</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {topPicks.map((lib) => (
+            <Card key={lib.name} className="group hover:border-primary/50 transition-colors">
+              <CardHeader className="pb-2">
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-base group-hover:text-primary transition-colors">
+                    {lib.name}
+                  </CardTitle>
+                  <a
+                    href={lib.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </div>
+                <CardDescription className="text-xs">{lib.note}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                  <span className="flex items-center gap-1">
+                    <Star className="h-3 w-3" /> {formatStars(lib.stars)}
+                  </span>
+                  <Badge variant="outline" className="text-xs">{lib.bundle}</Badge>
+                  <Badge variant="outline" className="text-xs">{lib.license}</Badge>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
