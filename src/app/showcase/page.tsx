@@ -148,7 +148,7 @@ export default function ShowcasePage() {
     <div className="flex min-h-screen bg-background">
       <SidebarNav />
 
-      <main className="flex-1 max-w-5xl py-8 px-8">
+      <main className="flex-1 max-w-5xl py-6 pt-16 lg:pt-8 px-4 sm:px-6 lg:px-8 lg:ml-0">
         <div className="mb-8">
           <h1 className="text-3xl font-bold">Component Reference</h1>
           <p className="text-muted-foreground mt-2">
@@ -1259,7 +1259,7 @@ export default function ShowcasePage() {
   </Card>
 </div>`}
             >
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <Card>
                   <CardContent className="pt-4">
                     <p className="text-sm text-muted-foreground">Revenue</p>
@@ -1357,7 +1357,7 @@ export default function ShowcasePage() {
   </table>
 </div>`}
             >
-              <div className="border rounded-lg">
+              <div className="border rounded-lg overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b bg-muted/50">
@@ -1955,7 +1955,7 @@ export default function ShowcasePage() {
   {/* ... more icons */}
 </div>`}
             >
-              <div className="grid grid-cols-6 gap-4">
+              <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 sm:gap-4">
                 {lucideIcons.slice(0, 18).map(({ name, icon: Icon }) => (
                   <div key={name} className="flex flex-col items-center gap-1">
                     <Icon className="h-5 w-5" />
@@ -2035,7 +2035,7 @@ export default function ShowcasePage() {
   ))}
 </div>`}
             >
-              <div className="grid grid-cols-6 gap-4">
+              <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 sm:gap-4">
                 {lucideIcons.slice(18).map(({ name, icon: Icon }) => (
                   <div key={name} className="flex flex-col items-center gap-1">
                     <Icon className="h-5 w-5" />
