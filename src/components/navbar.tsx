@@ -9,6 +9,7 @@ const links = [
   { href: "/", label: "Stack" },
   { href: "/catalog", label: "Catalog" },
   { href: "/compare", label: "Compare" },
+  { href: "/showcase", label: "Showcase" },
 ];
 
 export function Navbar() {
