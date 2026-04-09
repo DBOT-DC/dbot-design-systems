@@ -1,0 +1,99 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-04-09",
+  "total_libraries": 43,
+  "categories": {
+    "component_libraries": {
+      "description": "Full UI component libraries and headless primitives",
+      "count": 12,
+      "dbot_primary": "shadcn/ui",
+      "libraries": [
+        {"name": "shadcn/ui", "stars": 112000, "license": "MIT", "bundle": "zero runtime", "ts": true, "ssr": "RSC native", "dark": true, "tree_shake": true, "url": "https://github.com/shadcn-ui/ui", "dbot_pick": "★★★ PRIMARY", "note": "Copy-paste model, Tailwind-native, RSC-ready"},
+        {"name": "Radix UI", "stars": 18700, "license": "MIT", "bundle": "5-12KB per primitive", "ts": true, "ssr": "Yes", "dark": true, "tree_shake": true, "url": "https://github.com/radix-ui/primitives", "dbot_pick": "★★★ HEADLESS BASE", "note": "AAA accessibility, unstyled primitives"},
+        {"name": "Mantine", "stars": 30900, "license": "MIT", "bundle": "~90KB core", "ts": true, "ssr": "Yes", "dark": true, "tree_shake": true, "url": "https://github.com/mantinedev/mantine", "dbot_pick": "★★ FULL KIT", "note": "100+ components, hooks, forms"},
+        {"name": "HeroUI (NextUI)", "stars": 28700, "license": "MIT", "bundle": "~45KB", "ts": true, "ssr": "Yes", "dark": true, "tree_shake": true, "url": "https://github.com/heroui-inc/heroui", "dbot_pick": "★★ BEAUTIFUL", "note": "Beautiful out of the box, v3 March 2026"},
+        {"name": "Ant Design", "stars": 97800, "license": "MIT", "bundle": "~2MB full", "ts": true, "ssr": "Yes", "dark": true, "tree_shake": true, "url": "https://github.com/ant-design/ant-design", "dbot_pick": "★ ENTERPRISE", "note": "Enterprise-grade, huge ecosystem"},
+        {"name": "MUI", "stars": 98000, "license": "MIT", "bundle": "~100KB core", "ts": true, "ssr": "Yes", "dark": true, "tree_shake": true, "url": "https://github.com/mui/material-ui", "dbot_pick": "★ ECOSYSTEM", "note": "Largest ecosystem, v9 beta"},
+        {"name": "Chakra UI v3", "stars": 40300, "license": "MIT", "bundle": "~30KB", "ts": true, "ssr": "Yes", "dark": true, "tree_shake": true, "url": "https://github.com/chakra-ui/chakra-ui", "dbot_pick": "★ ARK+PANDA", "note": "v3 uses Ark UI + Panda CSS"},
+        {"name": "Park UI", "stars": 2300, "license": "MIT", "bundle": "zero runtime", "ts": true, "ssr": "RSC", "dark": true, "tree_shake": true, "url": "https://github.com/park-ui/park-ui", "dbot_pick": "★ ALT SHADCN", "note": "Ark UI + Panda CSS, copy-paste model"},
+        {"name": "Ark UI", "stars": 5000, "license": "MIT", "bundle": "zero runtime", "ts": true, "ssr": "Yes", "dark": true, "tree_shake": true, "url": "https://github.com/chakra-ui/ark", "dbot_pick": "HEADLESS", "note": "Multi-framework headless primitives"},
+        {"name": "React Aria", "stars": 15000, "license": "Apache-2.0", "bundle": "15-25KB", "ts": true, "ssr": "Yes", "dark": true, "tree_shake": true, "url": "https://github.com/adobe/react-spectrum", "dbot_pick": "A11Y FOCUS", "note": "Adobe, WAI-ARIA compliance"},
+        {"name": "Headless UI", "stars": 28500, "license": "MIT", "bundle": "5-10KB", "ts": true, "ssr": "Yes", "dark": false, "tree_shake": true, "url": "https://github.com/tailwindlabs/headlessui", "dbot_pick": "TAILWIND PAIR", "note": "Tailwind Labs official"},
+        {"name": "React Bits", "stars": 37400, "license": "MIT", "bundle": "varies", "ts": true, "ssr": "Yes", "dark": true, "tree_shake": true, "url": "https://github.com/vasanthk/react-bits", "dbot_pick": "ANIMATED", "note": "Animated/interactive components"}
+      ]
+    },
+    "dashboard_data": {
+      "description": "Dashboard components, charts, tables, and data visualization",
+      "count": 10,
+      "dbot_primary": "Tremor + Recharts + TanStack Table",
+      "libraries": [
+        {"name": "Tremor", "stars": 21000, "license": "MIT", "bundle": "~20KB", "ts": true, "ssr": "Yes", "dark": true, "tree_shake": true, "url": "https://github.com/tremorlabs/tremor", "dbot_pick": "★★★ PRIMARY", "note": "KPI cards, charts on Radix+Tailwind"},
+        {"name": "Recharts", "stars": 24500, "license": "MIT", "bundle": "~60KB", "ts": true, "ssr": "Yes", "dark": true, "tree_shake": true, "url": "https://github.com/recharts/recharts", "dbot_pick": "★★★ CHARTS", "note": "Declarative, composable, React-native"},
+        {"name": "TanStack Table", "stars": 26000, "license": "MIT", "bundle": "~12KB", "ts": true, "ssr": "Yes", "dark": false, "tree_shake": true, "url": "https://github.com/tanstack/table", "dbot_pick": "★★★ TABLES", "note": "Headless, sort/filter/page/virtual"},
+        {"name": "TradingView Lightweight Charts", "stars": 9200, "license": "Apache-2.0", "bundle": "~45KB", "ts": true, "ssr": "No", "dark": true, "tree_shake": false, "url": "https://github.com/tradingview/lightweight-charts", "dbot_pick": "★★★ CRYPTO", "note": "Candlesticks, volume, crosshair, financial"},
+        {"name": "LiteCharts", "stars": 1400, "license": "MIT", "bundle": "~20KB", "ts": true, "ssr": "No", "dark": true, "tree_shake": false, "url": "https://github.com/nicehash/litecharts", "dbot_pick": "★★ CRYPTO ALT", "note": "Lightweight trading charts, React wrapper"},
+        {"name": "Nivo", "stars": 15000, "license": "MIT", "bundle": "~50KB per chart", "ts": true, "ssr": "Yes", "dark": true, "tree_shake": true, "url": "https://github.com/plouc/nivo", "dbot_pick": "★★ SERVER CHARTS", "note": "SSR-first, SVG, 40+ chart types"},
+        {"name": "Visx", "stars": 19500, "license": "MIT", "bundle": "5-15KB per viz", "ts": true, "ssr": "Yes", "dark": false, "tree_shake": true, "url": "https://github.com/airbnb/visx", "dbot_pick": "★★ LOW-LEVEL", "note": "Airbnb, low-level building blocks"},
+        {"name": "AG Grid", "stars": 14500, "license": "MIT/Commercial", "bundle": "~200KB", "ts": true, "ssr": "Yes", "dark": true, "tree_shake": false, "url": "https://github.com/ag-grid/ag-grid", "dbot_pick": "★ ENTERPRISE TABLE", "note": "Excel-like, free tier limited"},
+        {"name": "Chart.js + react-chartjs-2", "stars": 65000, "license": "MIT", "bundle": "~65KB", "ts": true, "ssr": "Yes", "dark": true, "tree_shake": true, "url": "https://github.com/chartjs/Chart.js", "dbot_pick": "★ GENERAL", "note": "Canvas-based, wide chart types"},
+        {"name": "Victory", "stars": 11000, "license": "MIT", "bundle": "~80KB", "ts": true, "ssr": "Yes", "dark": true, "tree_shake": true, "url": "https://github.com/FormidableLabs/victory", "dbot_pick": "★ FORMIDABLE", "note": "Formidable Labs, composable"}
+      ]
+    },
+    "animation": {
+      "description": "Animation and motion libraries",
+      "count": 5,
+      "dbot_primary": "Framer Motion + AutoAnimate",
+      "libraries": [
+        {"name": "Framer Motion", "stars": 52000, "license": "MIT", "bundle": "~30KB", "ts": true, "ssr": "Yes", "dark": false, "tree_shake": true, "url": "https://github.com/framer/motion", "dbot_pick": "★★★ PRIMARY", "note": "Layout animations, gestures, exit animations"},
+        {"name": "Motion", "stars": 25000, "license": "MIT", "bundle": "~5KB", "ts": true, "ssr": "Yes", "dark": false, "tree_shake": true, "url": "https://github.com/motiondivision/motion", "dbot_pick": "★★ LIGHTWEIGHT", "note": "Framer creator's new lib, CSS-first"},
+        {"name": "AutoAnimate", "stars": 18500, "license": "MIT", "bundle": "~2KB", "ts": true, "ssr": "Yes", "dark": false, "tree_shake": true, "url": "https://github.com/formkit/auto-animate", "dbot_pick": "★★ ZERO-CONFIG", "note": "One-line list animations"},
+        {"name": "React Spring", "stars": 26000, "license": "MIT", "bundle": "~12KB", "ts": true, "ssr": "Yes", "dark": false, "tree_shake": true, "url": "https://github.com/pmndrs/react-spring", "dbot_pick": "★ PHYSICS", "note": "Spring physics, organic feel"},
+        {"name": "GSAP", "stars": 21000, "license": "Commercial/Free", "bundle": "~25KB", "ts": true, "ssr": "Yes", "dark": false, "tree_shake": false, "url": "https://github.com/greensock/GSAP", "dbot_pick": "★ PREMIUM", "note": "Industry standard, ScrollTrigger"}
+      ]
+    },
+    "forms_validation": {
+      "description": "Form handling and schema validation",
+      "count": 4,
+      "dbot_primary": "React Hook Form + Zod",
+      "libraries": [
+        {"name": "React Hook Form", "stars": 44600, "license": "MIT", "bundle": "~9KB", "ts": true, "url": "https://github.com/react-hook-form/react-hook-form", "dbot_pick": "★★★ PRIMARY", "note": "Uncontrolled inputs, ~12M weekly downloads"},
+        {"name": "Zod", "stars": 42300, "license": "MIT", "bundle": "~2KB core", "ts": true, "url": "https://github.com/colinhacks/zod", "dbot_pick": "★★★ VALIDATION", "note": "TypeScript-first, ~31M weekly downloads"},
+        {"name": "Conform", "stars": 6800, "license": "MIT", "bundle": "~8KB", "ts": true, "url": "https://github.com/edmundhung/conform", "dbot_pick": "★★ SERVER-FIRST", "note": "Next.js Server Actions, progressive enhancement"},
+        {"name": "TanStack Form", "stars": 6400, "license": "MIT", "bundle": "~9.6KB", "ts": true, "url": "https://github.com/tanstack/form", "dbot_pick": "★ TANSTACK", "note": "Framework-agnostic, fine-grained subscriptions"}
+      ]
+    },
+    "icons": {
+      "description": "SVG icon libraries",
+      "count": 4,
+      "dbot_primary": "Lucide React",
+      "libraries": [
+        {"name": "Lucide React", "stars": 21900, "license": "ISC", "bundle": "~0.5KB/icon", "ts": true, "url": "https://github.com/lucide-icons/lucide", "dbot_pick": "★★★ PRIMARY", "note": "1500+ icons, ~55M weekly downloads"},
+        {"name": "Heroicons", "stars": 23400, "license": "MIT", "bundle": "~0.4KB/icon", "ts": true, "url": "https://github.com/tailwindlabs/heroicons", "dbot_pick": "★★ TAILWIND", "note": "292 icons, outline/solid/mini"},
+        {"name": "Phosphor Icons", "stars": 1600, "license": "MIT", "bundle": "~1KB/icon", "ts": true, "url": "https://github.com/phosphor-icons/react", "dbot_pick": "★ VARIETY", "note": "7700+ icons, 6 weight variants"},
+        {"name": "Tabler Icons", "stars": 20500, "license": "MIT", "bundle": "~0.5KB/icon", "ts": true, "url": "https://github.com/tabler/tabler-icons", "dbot_pick": "★ MEGA SET", "note": "6000+ MIT icons, stroke-based"}
+      ]
+    },
+    "styling": {
+      "description": "CSS frameworks and design token systems",
+      "count": 4,
+      "dbot_primary": "Tailwind CSS v4",
+      "libraries": [
+        {"name": "Tailwind CSS v4", "stars": 94300, "license": "MIT", "bundle": "purged CSS", "ts": true, "url": "https://github.com/tailwindlabs/tailwindcss", "dbot_pick": "★★★ PRIMARY", "note": "Oxide engine (Rust), 100x faster builds"},
+        {"name": "Panda CSS", "stars": 6000, "license": "MIT", "bundle": "zero runtime", "ts": true, "url": "https://github.com/chakra-ui/panda", "dbot_pick": "★★ ALT", "note": "Build-time CSS-in-JS, RSC compatible"},
+        {"name": "Vanilla Extract", "stars": 10300, "license": "MIT", "bundle": "zero runtime", "ts": true, "url": "https://github.com/vanilla-extract-css/vanilla-extract", "dbot_pick": "★ TS STYLES", "note": "Stylesheets-in-TypeScript"},
+        {"name": "StyleX (Meta)", "stars": 9100, "license": "MIT", "bundle": "zero runtime", "ts": true, "url": "https://github.com/facebook/stylex", "dbot_pick": "★ META SCALE", "note": "Powers FB/IG/WhatsApp"}
+      ]
+    },
+    "state": {
+      "description": "State management libraries",
+      "count": 4,
+      "dbot_primary": "TanStack Query + Zustand",
+      "libraries": [
+        {"name": "TanStack Query", "stars": 49000, "license": "MIT", "bundle": "~12KB", "ts": true, "url": "https://github.com/tanstack/query", "dbot_pick": "★★★ SERVER STATE", "note": "Caching, mutations, pagination, prefetching"},
+        {"name": "Zustand", "stars": 57600, "license": "MIT", "bundle": "~1.2KB", "ts": true, "url": "https://github.com/pmndrs/zustand", "dbot_pick": "★★★ CLIENT STATE", "note": "~1KB, no providers, handles concurrency"},
+        {"name": "Jotai", "stars": 21100, "license": "MIT", "bundle": "~3KB", "ts": true, "url": "https://github.com/pmndrs/jotai", "dbot_pick": "★ ATOMIC", "note": "Atomic model, zero unnecessary re-renders"},
+        {"name": "Nuqs", "stars": 10300, "license": "MIT", "bundle": "~5.5KB", "ts": true, "url": "https://github.com/47ng/nuqs", "dbot_pick": "★ URL STATE", "note": "Type-safe URL search params"}
+      ]
+    }
+  }
+}
